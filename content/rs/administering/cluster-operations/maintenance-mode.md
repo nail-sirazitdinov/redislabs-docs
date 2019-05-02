@@ -5,9 +5,14 @@ weight: $weight
 alwaysopen: false
 categories: ["RS"]
 ---
+
 When you need to do hardware or operating system maintenance on a server that hosts an RS node,
 it is important that you move all of the shards on that node to another node to protect the data.
 You can use maintenance mode to handle this process simply and efficiently.
+
+{{% warning %}}
+Best practice is to run maintenance node by node. However if decided to enable it for multiple nodes make sure that quorum is not affected. Majority of the nodes must be online otherwise cluster will fail. 
+{{% /warning %}}
 
 ## Turning Maintenance Mode ON
 
